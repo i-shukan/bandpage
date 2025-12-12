@@ -33,13 +33,21 @@
     <script src="../js/gallery.js"></script>
     <script src="../js/lightgallery.umd.js"></script>
     <script>
-        let height = 250 / 1440 * window.innerWidth;
+        let value;
+        if (window.innerHeight > window.innerWidth) {
+            value = window.innerHeight;
+        } else {
+            value = window.innerWidth;
+        }
+
+        let height = 250 / 1440 * value;
+        let border = 45 / 1440 * window.innerWidth;
 
         $('.gallery').justifiedGallery({
             rowHeight : height,
             lastRow : 'justify',
             margins : 15,
-            border: 45,
+            border: border,
         });
 
         lightGallery(document.querySelector('.gallery'), {
