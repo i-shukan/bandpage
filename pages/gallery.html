@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/justifiedGallery.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="../css/lg-zoom.css" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <title>Страх за дверью</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"><span></span></div>
+        </div>
+    </div>
+    <header class="header">
+        <span class="header__logo"><a href="../index.html">СТРАХ ЗА ДВЕРЬЮ</a></span>
+        <nav class="header__menu header-menu">
+            <ul class="header-menu__item"><a href="./members.html">УЧАСТНИКИ</a></ul>
+            <ul class="header-menu__item header-menu__item_active"><a href="#">ГАЛЕРЕЯ</a></ul>
+            <ul class="header-menu__item"><a href="./releases.html">РЕЛИЗЫ</a></ul>
+        </nav>
+    </header>
+    <main class="gallery">
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery.justifiedGallery.min.js"></script>
+    <script src="../js/lg-zoom.umd.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/lightgallery.umd.js"></script>
+    <script>
+        let height = 250 / 1440 * window.innerWidth;
+
+        $('.gallery').justifiedGallery({
+            rowHeight : height,
+            lastRow : 'justify',
+            margins : 15,
+            border: 45,
+        });
+
+        lightGallery(document.querySelector('.gallery'), {
+            mode: 'lg-fade',
+            thumbnail: true,
+            selector: '.gallery a'
+        });
+    </script>
+</body>
+</html>
