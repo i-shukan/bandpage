@@ -9,7 +9,7 @@ window.onload = function () {
   }, 500);
 };
 let menu = document.querySelector('.header__burger');
-menu.addEventListener("pointerenter", () => {
+menu.addEventListener("click", () => {
   let elems = document.querySelectorAll('.header__burger, .header__menu_burger');
   for (let elem of elems) {
     elem.classList.toggle('active');
