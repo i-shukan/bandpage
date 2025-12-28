@@ -8,6 +8,13 @@ window.onload = function () {
     document.body.classList.add('loaded');
   }, 500);
 };
+let menu = document.querySelector('.header__burger');
+menu.addEventListener("pointerenter", () => {
+  let elems = document.querySelectorAll('.header__burger, .header__menu_burger');
+  for (let elem of elems) {
+    elem.classList.toggle('active');
+  }
+});
 const releases = [{
   title: 'Останусь молодым (2025)',
   image: '../img/releases/ostanusmolodim.png',
